@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  background-color: #FBB124;
+}
+
+.App-header {
+  background-color: #FBB124;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+}
+
+.home-section {
+  background-color: #CAE675;
+  min-height: 75vh;
+  width: 30vw;
+}
+
+.center-section {
+  background-color: #CAE675;
+  min-height: 75vh;
+  width: 38vw;
+}
+
+.visitor-section {
+  background-color: #CAE675;
+  min-height: 75vh;
+  width: 30vw;
+}

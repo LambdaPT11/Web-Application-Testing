@@ -1,0 +1,151 @@
+.grid-container {
+    display: grid;
+    max-height: 30rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header""score score score""hit-label ball-label strike-label""hit-btn ball-btn strike-btn";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    background-color: darkgreen;
+    color: whitesmoke;
+}
+
+/********** SCORE **********/
+.score {
+    grid-area: score;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+}
+
+.visitor-score {
+    border: 2px solid #596C29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: xx-large;
+    width: 6rem;
+    height: 8rem;
+}
+
+/********** HIT **********/
+.hit-label {
+    grid-area: hit-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.v-hit-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    border-radius: 5px;
+}
+
+/********** BALL **********/
+.ball-label {
+    grid-area: ball-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.v-ball-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    border-radius: 5px;
+}
+
+/********** STRIKE **********/
+.strike-label {
+    grid-area: strike-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.v-strike-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    border-radius: 5px;
+}
+
+/********** BTN BALL **********/
+.ball-btn {
+    grid-area: ball-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
+}
+
+.v-ball-btn {
+    align-items: center;
+    width: 4em;
+    height: 1.5rem;
+    border: 2px solid #596C29;
+    border-radius: 3px;
+    background-color: azure;
+}
+
+/********** BTN STRIKE **********/
+.strike-btn {
+    grid-area: strike-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
+}
+
+.v-strike-btn {
+    align-items: center;
+    width: 4em;
+    height: 1.5rem;
+    border: 2px solid #596C29;
+    border-radius: 3px;
+    background-color: azure;
+}
+
+/********** BTN Hit **********/
+.hit-btn {
+    grid-area: hit-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
+}
+
+.v-hit-btn {
+    align-items: center;
+    width: 4em;
+    height: 1.5rem;
+    border: 2px solid #596C29;
+    border-radius: 3px;
+    background-color: azure;
+
+}

@@ -1,0 +1,64 @@
+.base {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-rows: repeat(4, 10vw);
+    grid-gap: none;
+    border: 1px solid black;
+}
+
+.base>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: block;
+    width: 100%;
+    background-color: darkgreen;
+    color: whitesmoke;
+}
+
+header,
+footer {
+    grid-column: 1/4;
+}
+
+.btn-section {
+    display: flex;
+    width: 30vw;
+
+    border: 1px solid black;
+}
+
+.score-section {
+    display: flex;
+    width: 30vw;
+
+    border: 1px solid black;
+}
+
+.home-hit,
+.home-ball,
+.home-strike {
+    display: flex;
+    max-width: 5em;
+    margin: auto;
+    flex-direction: column;
+}
+
+.home-label {
+    padding: 10px;
+    max-width: 3em;
+    border: 1px solid #596C29;
+    border-radius: 5px;
+}
+
+.home-button {
+    width: 4rem;
+    height: 2em;
+    margin-top: 1em;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: azure;
+}
