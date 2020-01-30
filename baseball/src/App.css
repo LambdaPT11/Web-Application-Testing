@@ -3,9 +3,13 @@
   background-color: #FBB124;
 }
 
+.App-header h2 {
+  margin: 0;
+}
+
 .App-header {
   background-color: #FBB124;
-  min-height: 5vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,18 +29,22 @@
 
 .home-section {
   background-color: #CAE675;
-  min-height: 75vh;
+  height: 76vh;
   width: 30vw;
 }
 
 .center-section {
   background-color: #CAE675;
-  min-height: 75vh;
+  height: 76vh;
   width: 38vw;
 }
 
 .visitor-section {
   background-color: #CAE675;
-  min-height: 75vh;
+  height: 76vh;
   width: 30vw;
+}
+
+.App-footer {
+  height: 10vh;
 }

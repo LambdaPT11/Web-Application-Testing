@@ -1,64 +1,245 @@
-.base {
+.grid-container {
     display: grid;
-    grid-template-columns: 10vw 10vw 10vw;
-    grid-template-rows: repeat(4, 10vw);
-    grid-gap: none;
-    border: 1px solid black;
+    height: 100%;
+    // border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header""score score score score""hit-label ball-label strike-label foul-label""hit-btn ball-btn strike-btn foul-btn";
 }
 
-.base>* {
+.header {
+    grid-area: header;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-header {
-    display: block;
     width: 100%;
+    height: 5rem;
     background-color: darkgreen;
     color: whitesmoke;
 }
 
-header,
-footer {
-    grid-column: 1/4;
-}
-
-.btn-section {
+.score-box {
     display: flex;
-    width: 30vw;
-
-    border: 1px solid black;
-}
-
-.score-section {
-    display: flex;
-    width: 30vw;
-
-    border: 1px solid black;
-}
-
-.home-hit,
-.home-ball,
-.home-strike {
-    display: flex;
-    max-width: 5em;
-    margin: auto;
     flex-direction: column;
 }
 
-.home-label {
-    padding: 10px;
-    max-width: 3em;
-    border: 1px solid #596C29;
+.score-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border: 2px solid #596C29;
+    border-top: none;
+    width: 6rem;
+}
+
+.base-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.base-on {
+    border: 2px solid #596C29;
+    background-color: #F5EDDE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    font-size: xx-large;
+    width: 6rem;
+    height: 8rem;
+}
+
+
+.base-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border: 2px solid #596C29;
+    border-top: none;
+    width: 6rem;
+}
+
+/********** SCORE **********/
+.score {
+    grid-area: score;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    width: 100%;
+    height: 10rem;
+}
+
+.home-score {
+    border: 2px solid #596C29;
+    background: linear-gradient(whitesmoke, wheat);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    font-size: xx-large;
+    width: 6rem;
+    height: 8rem;
+}
+
+/********** HIT **********/
+.hit-label {
+    grid-area: hit-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.h-hit-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    background-color: #F2EADA;
     border-radius: 5px;
 }
 
-.home-button {
-    width: 4rem;
-    height: 2em;
-    margin-top: 1em;
-    border: 1px solid black;
+/********** BALL **********/
+.ball-label {
+    grid-area: ball-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.h-ball-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    background-color: #F5E6CC;
+    border-radius: 5px;
+}
+
+/********** STRIKE **********/
+.strike-label {
+    grid-area: strike-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.h-strike-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    background-color: #F5EDDE;
+    border-radius: 5px;
+}
+
+/********** FOUL **********/
+.foul-label {
+    grid-area: foul-label;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
+
+.h-foul-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.7rem;
+    height: 3.7rem;
+    border: 2px solid #596C29;
+    background-color: #F5E6CC;
+    border-radius: 5px;
+}
+
+/********** BTN HIT **********/
+.hit-btn {
+    grid-area: hit-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
+}
+
+.h-hit-btn,
+.h-ball-btn,
+.h-strike-btn,
+.h-foul-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 5em;
+    height: 2rem;
+    border: 2px solid #596C29;
     border-radius: 3px;
-    background-color: azure;
+    background-color: #8E7746;
+    color: whitesmoke;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        animation: pulse 0.3s ease 0.1s normal 2;
+        border-radius: 5px;
+
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transfom: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+
+
+/********** BTN BALL **********/
+.ball-btn {
+    grid-area: ball-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
+}
+
+
+
+/********** BTN STRIKE **********/
+.strike-btn {
+    grid-area: strike-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
+}
+
+
+
+/********** BTN FOUL **********/
+.foul-btn {
+    grid-area: foul-btn;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 5rem;
 }
