@@ -1,3 +1,5 @@
+![baseball](https://github.com/LambdaPT11/Web-Application-Testing/blob/mason-roberts/baseball.jpg)
+
 # Testing II
 
 In this project, you will demonstrate proficiency by writing unit tests and production code to satisfy the _Minimum Viable Product_ described below.
